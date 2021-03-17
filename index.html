@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+  <link rel="stylesheet" href="css/bootstrap.css" /> 
+  <link rel="stylesheet" href="css/all.css" />   
+  <link rel="stylesheet" href="css/font-awesome.min.css" />   
+  <link rel="stylesheet" href="css/style.css" /> 
+  <link rel="stylesheet" href="css/responsive.css" /> 
+  <title>Assignment</title>
+</head>
+<header> 
+  <figure><a href=""><img src="images/logo.png"></a> </figure>
+  <nav class="main-menu">
+    <i class="fa fa-bars mob-icon" aria-hidden="true"></i>
+    <ul class="mob-menu">
+      <li onclick="openContent(event, 'resources')" class="tabClick active">Resources and Planning</li>
+      <li onclick="openContent(event, 'assessments')" class="tabClick">Assessments</li>
+      <li onclick="openContent(event, 'insights')" class="tabClick">Insights</li>
+    </ul>
+  </nav>
+  <nav class="right-menu">
+    <ul>
+      <li><a href=""><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>
+      <li><a href=""><span>AH</span></a></li>
+    </ul>
+  </nav>
+</header>
+<aside id="mySidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+  <ul>
+    <li class="list ListMain"  ><i class="fa fa-bars" aria-hidden="true"></i><span>Menu</span></li>
+    <li class="list current"  ><i class="fa fa-th-list" aria-hidden="true"></i><span>Register SPA</span></li>
+    <li class="list"  ><i class="fa fa-id-card" aria-hidden="true"></i><span>Gateway Platforms</span></li>
+    <li class="list" ><i class="fa fa-globe" aria-hidden="true"></i><span>Region Configuration</span></li>
+    <li class="list"  ><i class="fa fa-user-o" aria-hidden="true"></i><span>User Entitlement</span></li>
+  </ul>
+</aside>
+<main class="main-menu-wrap" id="main">
+  <section class="main-content tabContent" id="resources">
+    <section class="top-section">
+      <span class="top-section-left">
+        <h3>Explore Lessions</h3>
+        <input type="text" name="" placeholder="Search"><i class="fa fa-search" aria-hidden="true"></i>
+      </span>
+      <span class="top-section-right">
+        <i class="fa fa-sort-amount-desc" aria-hidden="true"></i>
+        <b>Sort by</b>
+      </span>
+    </section>
+    <main class="sub-main tab-content">
+      <article class="main-content">
+        <section class="content-tab">
+          <figure>
+            <img src="images/sample1.jpg">
+          </figure>
+          <figcaption>EDEXEL GCSE(1-9) Mathematics</figcaption>
+        </section>
+        <section class="content-tab">
+          <figure>
+            <img src="images/sample2.jpg">
+          </figure>
+          <figcaption>EDEXEL GCSE(1-9) Combined Science</figcaption>
+        </section>
+        <section class="content-tab">
+          <figure>
+            <img src="images/sample3.jpg">
+          </figure>
+          <figcaption>EDEXEL GCSE(1-9) Combined Science Support Edition</figcaption>
+        </section>
+        <section class="content-tab">
+          <figure>
+            <img src="images/sample4.jpg">
+          </figure>
+          <figcaption>EDEXEL A level Biology</figcaption>
+        </section>
+        <section class="content-tab">
+          <figure>
+            <img src="images/sample4.jpg">
+          </figure>
+          <figcaption>EDEXEL A level Chemistry</figcaption>
+        </section>
+        <section class="content-tab">
+          <figure>
+            <img src="images/sample4.jpg">
+          </figure>
+          <figcaption>EDEXEL A level Physics</figcaption>
+        </section>
+      </article>
+    </main>
+  </section>
+  <section class="main-content tabContent" id="assessments">
+  </section>
+  <section class="main-content tabContent" id="insights">
+  </section>
+</main>
+
+<footer>
+  <nav>
+    <ul><li><i class="fa fa-user-o" aria-hidden="true"></i></li></ul>
+  </nav>
+</footer>
+<body>  
+
+  <! –– scripts required --> 
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script> 
+  <script>
+    var mini = true;
+
+    function toggleSidebar() {
+      if (mini) {
+        console.log("opening sidebar");
+        document.getElementById("mySidebar").style.width = "220px";
+        document.getElementById("main").style.marginLeft = "220px";
+        this.mini = false;
+      } else {
+        console.log("closing sidebar");
+        document.getElementById("mySidebar").style.width = "46px";
+        document.getElementById("main").style.marginLeft = "46px";
+        this.mini = true;
+      }
+    }
+
+  </script> 
+  <script>
+    function openContent(evt, tabName) { 
+      var i, tabContent, tabClick; 
+      tabContent = document.getElementsByClassName("tabContent");
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+      } 
+      tabClick = document.getElementsByClassName("tabClick");
+      for (i = 0; i < tabClick.length; i++) {
+        tabClick[i].className = tabClick[i].className.replace(" active", "");
+      } 
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+  <script>     
+    $(document).ready(function(){
+
+      $('.list').click(function(){
+        var tab_id = $(this).attr('data-tab');
+
+        $('.list').removeClass('current');
+        $('.main-menu').removeClass('current');
+
+        $(this).addClass('current');
+        $("#"+tab_id).addClass('current');
+      })
+
+    })
+
+  </script>
+  <script> 
+    $(".mob-icon").click(function(){
+      $(".mob-menu").toggleClass("mob-menu-display");
+    });
+  </script>
+</body>
+</html>

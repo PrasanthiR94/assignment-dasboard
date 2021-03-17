@@ -1,0 +1,114 @@
+    @media screen and (max-width: 992px){
+        section.content-tab {  
+            width: 250px; 
+            margin-right: 15px; 
+            margin-bottom: 15px;
+            min-height: 100px;
+        }
+        section.content-tab figure { 
+            width: 65px; 
+        }
+        section.content-tab figcaption { 
+            width: 132px; 
+            font-size: 12px; 
+            margin-left: 6px;
+        }
+    }
+    @media screen and (max-width: 992px){
+        header figure { 
+            width: 19%; 
+        }
+        header figure img {
+            width: 130px;
+        }
+    }
+    @media screen and (max-width: 767px){
+        header figure img {
+            width:70px;
+        }
+        nav.right-menu ul li { 
+            padding: 0px 0px;
+        }
+        nav.right-menu {
+            width: 12%; 
+        }
+        header {
+            padding: 0 0px;
+        }
+        nav.main-menu ul li { 
+            padding: 8px 4px;
+            font-size: 11px;
+        }
+        nav.right-menu ul li i { 
+            font-size: 20px;
+        }
+        nav.right-menu ul li span { 
+            padding: 3px;
+            font-size: 11px;
+        }
+        nav.right-menu ul { 
+            margin-top: 9px;
+        }
+        nav.main-menu { 
+            width: 66%;
+        }
+        .main-menu .mob-icon{
+            display: block;
+        }
+        ul.mob-menu {
+            position: absolute;
+            background: #fff;
+            width: 200px;
+            top: 44px;
+            right: 9px;
+            padding: 12px;
+        }
+
+        ul.mob-menu li {
+            width: 80%;
+        }
+        .main-menu i {
+            display: block;
+            position: absolute;
+            right: 58px;
+            top: 12px;
+            color: #e40982;
+        }
+        .mob-menu{
+            display:none;
+        }
+        .mob-menu-display{
+            display: block;
+        }
+        footer { 
+            padding: 8px 10px;
+        }
+        main.main-menu-wrap { 
+            padding: 25px 10px;
+            margin-top: 0;
+        }
+        aside ul li .fa {
+            font-size: 15px;
+        }
+        aside ul li span {
+            margin-left: 18px;
+            font-size: 12px;
+        }
+        aside { 
+            padding-top: 50px;
+
+            width: 40px;
+
+        }
+        aside ul li {
+            padding: 6px 14px;
+        }
+        section.content-tab {
+            width: 250px;
+        }
+        section.content-tab figcaption {
+            width:130px;
+            font-size: 11px;
+            margin-left: 2px;
+        }
+    }
